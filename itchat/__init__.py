@@ -3,7 +3,7 @@ import time
 from .client import client
 from . import content # this is for creating pyc
 
-__version__ = '1.1.16'
+__version__ = '1.1.17'
 
 __client = client()
 HOT_RELOAD = False
@@ -49,7 +49,7 @@ def update_chatroom(groupUserName, detailedMember=False): return __client.update
 def create_chatroom(memberList, topic = ''): return __client.create_chatroom(memberList, topic)
 def set_chatroom_name(chatroomUserName, name): return __client.set_chatroom_name(chatroomUserName, name)
 def delete_member_from_chatroom(chatroomUserName, memberList): return __client.delete_member_from_chatroom(chatroomUserName, memberList)
-def add_member_into_chatroom(chatroomUserName, memberList): return __client.add_member_into_chatroom(chatroomUserName, memberList)
+def add_member_into_chatroom(chatroomUserName, memberList, useInvitation=False): return __client.add_member_into_chatroom(chatroomUserName, memberList, useInvitation)
 # <<<
 
 # The following is the tear of age, will be deleted soon
